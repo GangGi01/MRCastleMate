@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/01_Scenes/PhotonLobby.unity
+    guid: eaf0754343f9fcd4fa58761961066dcc
+  - enabled: 1
+    path: Assets/01_Scenes/PhotonGameSample.unity
+    guid: 20ac085b68ac49f4d823d0312564ed56
+  - enabled: 1
     path: Assets/01_Scenes/ARSence_Hyunseok.unity
     guid: 55daccc09a3b69647bbab145b54a3ab3
   m_configObjects:
