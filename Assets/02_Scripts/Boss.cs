@@ -1,6 +1,7 @@
+using System;
 using UnityEngine;
 
-public class Boss : MonoBehaviour
+public class Boss : MonoBehaviour, IDamage
 {
     [SerializeField]
     public BossData bossData;
@@ -10,8 +11,18 @@ public class Boss : MonoBehaviour
     private int wavepointIndex = 0;
 
     public Transform enemy;
-    public float speed = 2.0f;
+    private bool isDead = false;
 
+    [NonSerialized] public float hp;
+    [NonSerialized] public float speed;
+
+    private void Start()
+    {
+        hp = bossData.hp;
+        speed = bossData.speed;
+
+        target = Waypoints.points[0];
+    }
 
     void Update()
     {
@@ -43,8 +54,24 @@ public class Boss : MonoBehaviour
         target = Waypoints.points[wavepointIndex];
     }
 
-    private void Start()
+    public void OnDamage(float damage)
     {
+        if (isDead) return;
 
+        hp -= damage;
+
+        if (hp < 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        if (isDead) return;
+
+        isDead = true;
+        GameManager.enemiesAlive--;
+        Destroy(gameObject);
     }
 }

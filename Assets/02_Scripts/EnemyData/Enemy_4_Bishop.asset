@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e1a02de3937133439e53f4b5e738bfe, type: 3}
-  m_Name: Enemy1
+  m_Name: Enemy_4_Bishop
   m_EditorClassIdentifier: 
-  enemyName: Pawn
-  hp: 100
-  speed: 0.05
-  enemyPrefab: {fileID: 484090, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
+  enemyName: Bishop
+  hp: 20
+  speed: 0.25
+  enemyPrefab: {fileID: 88713851178480493, guid: 2f620afa0cbb3e44dbe83833bed7a7b4, type: 3}
