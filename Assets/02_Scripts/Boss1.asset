@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e1a02de3937133439e53f4b5e738bfe, type: 3}
-  m_Name: Enemy1
+  m_Script: {fileID: 11500000, guid: 5700276bc87d68246bd8304aaf40287c, type: 3}
+  m_Name: Boss1
   m_EditorClassIdentifier: 
-  enemyName: Pawn
-  hp: 100
-  speed: 0.05
-  enemyPrefab: {fileID: 484090, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
+  bossName: King
+  hp: 300
+  speed: 3
+  bossPrefab: {fileID: 422114, guid: 9e4e635002b6a524ca896adb28e8e388, type: 3}
