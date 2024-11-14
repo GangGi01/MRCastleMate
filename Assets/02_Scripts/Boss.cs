@@ -1,30 +1,17 @@
-using System;
 using UnityEngine;
 
-
-public class Enemy : MonoBehaviour
+public class Boss : MonoBehaviour
 {
-
     [SerializeField]
-    public EnemyData enemyData;
+    public BossData bossData;
     private float turnSpeed = 20.0f;
 
     private Transform target;
     private int wavepointIndex = 0;
 
-    private bool isDead = false;
+    public Transform enemy;
+    public float speed = 2.0f;
 
-    [NonSerialized] public float hp;
-    [NonSerialized] public float speed;
-
-
-    private void Start()
-    {
-        hp = enemyData.hp;
-        speed = enemyData.speed;
-
-        target = Waypoints.points[0];
-    }
 
     void Update()
     {
@@ -56,26 +43,8 @@ public class Enemy : MonoBehaviour
         target = Waypoints.points[wavepointIndex];
     }
 
-    public void OnDamage(float damage)
+    private void Start()
     {
-        if (isDead) return;
 
-        hp -= damage;
-
-        if (hp < 0)
-        {
-            Die();
-        }
     }
-
-    private void Die()
-    {
-        if (isDead) return;
-
-        isDead = true;
-        GameManager.enemiesAlive--;
-        Destroy(gameObject);
-    }
-
-
 }
