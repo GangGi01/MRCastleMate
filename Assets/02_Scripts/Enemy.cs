@@ -62,7 +62,8 @@ public class Enemy : MonoBehaviour, IDamage
 
         hp -= damage;
 
-        if (hp < 0)
+        Debug.Log($"받은 데미지: {damage}, 남은 HP: {hp}");
+        if (hp <= 0)
         {
             Die();
         }

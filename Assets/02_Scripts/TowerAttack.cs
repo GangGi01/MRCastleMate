@@ -120,7 +120,7 @@ public class TowerAttack : MonoBehaviour
 
     private IEnumerator PerformAttack(Vector3 targetPosition)
     {
-        Vector3 attackPosition = transform.position + (targetPosition - transform.position).normalized * moveDuration;
+        Vector3 attackPosition = targetPosition;
 
         // 이동
         float elapsedTime = 0f;

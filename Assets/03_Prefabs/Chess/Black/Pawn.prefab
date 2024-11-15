@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 2
-  damage: 2
+  damage: 5
   turnSpeed: 200
   attackCooldown: 1
   enemyTage: ENEMY
