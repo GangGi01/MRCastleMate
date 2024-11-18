@@ -21,7 +21,6 @@ public class TowerAttack : MonoBehaviour
 
     private void Start()
     {
-        originalPosition = transform.position; // 초기 위치 저장
         StartCoroutine(UpdateTarget());
     }
 
@@ -72,6 +71,7 @@ public class TowerAttack : MonoBehaviour
                 currentTarget = null;
                 currentBoss = null;
             }
+            originalPosition = transform.position; // 초기 위치 저장
             yield return new WaitForSeconds(0.5f);
         }
     }
@@ -126,7 +126,7 @@ public class TowerAttack : MonoBehaviour
         float elapsedTime = 0f;
         while (elapsedTime < moveDuration)
         {
-            transform.position = Vector3.Lerp(originalPosition, attackPosition, elapsedTime / moveDuration);
+            transform.position = Vector3.Lerp(transform.position, attackPosition, elapsedTime / moveDuration);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
@@ -135,12 +135,11 @@ public class TowerAttack : MonoBehaviour
         elapsedTime = 0f;
         while (elapsedTime < moveDuration)
         {
-            transform.position = Vector3.Lerp(attackPosition, originalPosition, elapsedTime / moveDuration);
+            transform.position = Vector3.Lerp(transform.position, originalPosition, elapsedTime / moveDuration);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-        transform.position = originalPosition; // 위치 보정
     }
 
     private void OnDrawGizmosSelected() //기즈모를 그려주는 유니티 함수

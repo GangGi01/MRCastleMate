@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -6035578889289983588}
   - component: {fileID: -516314905127251594}
   - component: {fileID: 6124225325854768276}
+  - component: {fileID: -5578416809832210690}
   m_Layer: 0
   m_Name: Pawn
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3484300687297639655}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.526, y: 0.80922073, z: -0.198}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -134,7 +135,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -5578416809832210690}
+        m_TargetAssemblyTypeName: ChessRigidBodyController, Assembly-CSharp
+        m_MethodName: ActivateRigidbody
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -218,15 +231,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d49cd8c429e49a4a9c55026addb6498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 2
+  range: 0.2
   damage: 5
   turnSpeed: 200
   attackCooldown: 1
   enemyTage: ENEMY
   bossTage: BOSS
-  partToRotate: {fileID: 0}
+  partToRotate: {fileID: 4689979773208248571}
   attackMoveDistance: 0.5
   moveDuration: 0.2
+--- !u!114 &-5578416809832210690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3484300687297639655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62c3e9259a5c8f41954fa58b0937a4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chessSpawner: {fileID: 0}
 --- !u!1 &4778464216981757130
 GameObject:
   m_ObjectHideFlags: 0
