@@ -19,6 +19,7 @@ public class ChessRigidBodyController : MonoBehaviour
             towerRigidbody.isKinematic = true; // 물리 작동 중지
             towerRigidbody.useGravity = false; // 중력 비활성화
         }
+        chessBool = true;
     }
 
     // 손으로 집을 때 호출할 메서드

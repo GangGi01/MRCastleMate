@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class ChessSpawner : MonoBehaviour
@@ -14,7 +13,6 @@ public class ChessSpawner : MonoBehaviour
     private void Start()
     {
         m_chessBool = ChessRigidBodyController.instance.chessBool;
-        m_chessBool = false;
     }
 
 
