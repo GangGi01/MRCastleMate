@@ -8,7 +8,7 @@ public class MainLobbyManager : MonoBehaviour
 
     public void OnSingleClicked()
     {
-        SceneManager.LoadScene("SingleGameSample");
+        SceneManager.LoadScene("MainGameSample");
     }
 
     public void OnMultiClicked()
